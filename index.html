@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Marques — Premium em São Paulo</title>
+  <meta name="description" content="Barbearia Marques é uma barbearia premium em São Paulo com cortes de alto padrão, ambiente luxuoso e atendimento exclusivo. Duas unidades: Vila Ema e Sapopemba." />
+  <meta name="keywords" content="barbearia São Paulo, barbearia Vila Ema, barbearia Sapopemba, corte masculino premium, Barbearia Marques, agendamento WhatsApp" />
+  <meta property="og:title" content="Barbearia Marques — Premium em São Paulo" />
+  <meta property="og:description" content="Cortes de alto padrão. Ambiente único. Experiência inesquecível." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0e0e0e" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="img/hero_background.jpg" as="image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ STRUCTURAL GRID LINES ═══════════════════ -->
+  <div class="grid-lines">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <!-- ═══════════════════ CURSOR DOT ═══════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════════════ LOADER ═══════════════════ -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <img src="img/logo.jpg" alt="Barbearia Marques Logo" class="loader-logo-img" />
+      </div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="img/logo.jpg" alt="Barbearia Marques Logo" class="nav-logo-img" />
+      <div class="nav-logo-text">
+        <span>Barbearia</span>
+        <span>Marques</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">Sobre</a></li>
+      <li><a href="#services" class="nav-link">Serviços</a></li>
+      <li><a href="#gallery" class="nav-link">Galeria</a></li>
+      <li><a href="#contact" class="nav-link">Contato</a></li>
+      <li><a href="#booking" class="nav-link nav-cta">Agendar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="img/hero_background.jpg" alt="Barbearia Marques" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">São Paulo · Premium</div>
+      <h1 class="hero-title">
+        <span class="title-line reveal-up" data-delay="0.1">Barbearia</span>
+        <span class="title-line title-italic reveal-up" data-delay="0.25">Marques.</span>
+      </h1>
+      <p class="hero-sub reveal-up" data-delay="0.5">Precisão. Estilo. Identidade.</p>
+      <div class="hero-actions reveal-up" data-delay="0.65">
+        <a href="#booking" class="btn btn-primary">Agendar Agora</a>
+        <a href="#gallery" class="btn btn-ghost">Ver Trabalhos</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Role para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat reveal-up" data-delay="0.7">
+        <span class="stat-num">+2K</span>
+        <span class="stat-label">Clientes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-up" data-delay="0.8">
+        <span class="stat-num">8+</span>
+        <span class="stat-label">Anos de Experiência</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-up" data-delay="0.9">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Unidades</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ MARQUEE ═══════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>CORTE · BARBA · DEGRADÊ · PIGMENTAÇÃO · RELAXAMENTO · NEVOU · DESIGN · LUZES ·&nbsp;</span>
+      <span>CORTE · BARBA · DEGRADÊ · PIGMENTAÇÃO · RELAXAMENTO · NEVOU · DESIGN · LUZES ·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="about" id="about">
+    <div class="about-bg">
+      <img src="img/about_background.png" alt="Barbearia Marques Farda" class="about-bg-img" loading="lazy" />
+      <div class="about-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="about-content-wrap reveal-up">
+        <div class="section-tag">— Sobre Nós</div>
+        <h2 class="section-title">
+          Arte que vai<br /><em>além do corte</em>
+        </h2>
+        <p class="about-text">
+          Na <strong>Barbearia Marques</strong>, cada cliente é tratado como único. Nossa missão vai além das tesouras e das navalhas — é sobre construir identidade, confiança e realçar o seu estilo.
+        </p>
+        <p class="about-text">
+          Com duas unidades modernas em <strong>São Paulo</strong> (Vila Ema e Sapopemba), oferecemos espaços onde a essência da barbearia tradicional se encontra com o design contemporâneo. Ambiente feito para o seu bem-estar, com profissionais altamente qualificados.
+        </p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">◈</div>
+            <div>
+              <strong>Precisão</strong>
+              <p>Cada linha com perfeição milimétrica</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">◈</div>
+            <div>
+              <strong>Exclusividade</strong>
+              <p>Atendimento personalizado para cada cliente</p>
+            </div>
+          </div>
+        </div>
+        <a href="#booking" class="btn btn-primary">Conhecer o Espaço</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SERVICES ═══════════════════ -->
+  <section class="services" id="services">
+    <div class="services-bg-text">CLUBE</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up">— Planos de Assinatura</div>
+        <h2 class="section-title reveal-up" data-delay="0.1">Clube <em>Marques</em></h2>
+        <div class="services-intro-wrap reveal-up" data-delay="0.2" style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
+          <h3 style="font-family: var(--font-serif); font-style: italic; font-size: 1.4rem; color: var(--white); font-weight: 400; line-height: 1.5; margin-bottom: 1.5rem;">
+            "É a liberdade de estar alinhado toda semana, sem pesar no bolso."
+          </h3>
+          <p style="font-size: 1rem; color: var(--cream-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+            Com a nossa assinatura, você paga um valor fixo e pode cuidar do seu visual com muito mais economia e constância. Simples, inteligente e feito pra quem gosta de estar sempre no padrão.
+          </p>
+          <p style="font-size: 0.9rem; letter-spacing: 0.05em; color: var(--copper); font-weight: 500; text-transform: uppercase;">
+            ⚠️ As vagas são limitadas e já tem gente garantindo a sua.
+          </p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1: Clube Marques One -->
+        <div class="service-card reveal-up" data-delay="0.1">
+          <div class="service-number">01</div>
+          <h3 class="service-name">Marques One</h3>
+          <p class="service-desc">Ideal para quem busca praticidade e manutenção básica mensal para manter o corte em dia.</p>
+          <ul style="list-style: none; padding: 0; margin: 1.5rem 0; font-size: 0.85rem; color: var(--cream-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>✓ 1 Corte de cabelo no mês</li>
+            <li>✓ Lavagem inclusa</li>
+            <li>✓ Finalização premium com pomada</li>
+            <li>✓ Atendimento com hora marcada</li>
+          </ul>
+          <div class="service-price" style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+            <span class="price-from">mensalidade fixa</span>
+            <span class="price-val">R$ 45,00</span>
+          </div>
+          <a href="https://wa.me/5511994090757?text=Olá! Quero entrar para o Clube Marques One." target="_blank" rel="noopener" class="service-cta">Assinar Clube →</a>
+        </div>
+
+        <!-- Card 2: Clube Marques Start (Featured) -->
+        <div class="service-card service-card--featured reveal-up" data-delay="0.2">
+          <div class="service-badge">Mais Popular</div>
+          <div class="service-number">02</div>
+          <h3 class="service-name">Marques Start</h3>
+          <p class="service-desc">Acesso ilimitado essencial. Fique no padrão toda semana com o melhor custo-benefício de SP.</p>
+          <ul style="list-style: none; padding: 0; margin: 1.5rem 0; font-size: 0.85rem; color: var(--cream-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>✓ Atendimentos ilimitados no mês</li>
+            <li>✓ Lavagem e finalização inclusas</li>
+            <li>✓ Agenda facilitada via WhatsApp</li>
+          </ul>
+          <div class="service-tiers">
+            <div class="service-tier">
+              <span>Corte Ilimitado</span>
+              <strong>R$ 89,99 <small>/mês</small></strong>
+            </div>
+            <div class="service-tier" style="margin: 0.25rem 0;">
+              <span>Barba Ilimitado</span>
+              <strong>R$ 109,99 <small>/mês</small></strong>
+            </div>
+            <div class="service-tier service-tier--highlight">
+              <span>Corte + Barba Ilimitado</span>
+              <strong>R$ 169,99 <small>/mês</small></strong>
+            </div>
+          </div>
+          <a href="https://wa.me/5511994090757?text=Olá! Quero entrar para o Clube Marques Start." target="_blank" rel="noopener" class="service-cta" style="margin-top: 1rem;">Assinar Clube →</a>
+        </div>
+
+        <!-- Card 3: Clube Marques Elite -->
+        <div class="service-card reveal-up" data-delay="0.3">
+          <div class="service-number">03</div>
+          <h3 class="service-name">Marques Elite</h3>
+          <p class="service-desc">A experiência VIP definitiva. Atendimento ilimitado com prioridade total de horário e regalias.</p>
+          <ul style="list-style: none; padding: 0; margin: 1.5rem 0; font-size: 0.85rem; color: var(--cream-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>✓ Atendimentos ilimitados no mês</li>
+            <li>✓ Cerveja ou bebida cortesia em toda visita</li>
+            <li>✓ Produtos premium importados inclusos</li>
+            <li>✓ Prioridade absoluta de agenda (Fila VIP)</li>
+            <li>✓ 10% OFF em cosméticos de home care</li>
+          </ul>
+          <div class="service-tiers">
+            <div class="service-tier">
+              <span>Corte Ilimitado</span>
+              <strong>R$ 139,99 <small>/mês</small></strong>
+            </div>
+            <div class="service-tier service-tier--highlight" style="margin-top: 0.25rem;">
+              <span>Corte + Barba Ilimitado</span>
+              <strong>R$ 249,99 <small>/mês</small></strong>
+            </div>
+          </div>
+          <a href="https://wa.me/5511994090757?text=Olá! Quero entrar para o Clube Marques Elite." target="_blank" rel="noopener" class="service-cta" style="margin-top: 1rem;">Assinar Clube →</a>
+        </div>
+
+      </div>
+
+      <div class="services-cta-wrap reveal-up" data-delay="0.4" style="text-align: center; margin-top: 4rem;">
+        <h4 style="font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 1rem; text-transform: uppercase;">Entra pro Clube.</h4>
+        <a href="https://wa.me/5511994090757?text=Olá! Gostaria de tirar dúvidas sobre o Clube Marques." target="_blank" rel="noopener" class="btn btn-primary">Falar com Consultor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GALLERY ═══════════════════ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up">— Galeria</div>
+        <h2 class="section-title reveal-up" data-delay="0.1">Nossos <em>trabalhos</em></h2>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Item 1: Corte & Barba (Wide) -->
+      <div class="gallery-item gallery-item--wide reveal-scale" data-delay="0.1">
+        <img src="img/corte+barba.png" alt="Combo Corte e Barba na Barbearia Marques" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 class="gallery-title">Corte & Barba</h3>
+          <p class="gallery-desc">A união perfeita entre precisão milimétrica e relaxamento exclusivo.</p>
+        </div>
+      </div>
+      <!-- Item 2: Personalizado -->
+      <div class="gallery-item reveal-scale" data-delay="0.2">
+        <img src="img/personalise.png" alt="Visagismo Personalizado Barbearia Marques" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 class="gallery-title">Personalizado</h3>
+          <p class="gallery-desc">Cortes desenhados sob medida para valorizar sua identidade.</p>
+        </div>
+      </div>
+      <!-- Item 3: Barboterapia -->
+      <div class="gallery-item reveal-scale" data-delay="0.3">
+        <img src="img/service-barba.png" alt="Serviço de Barboterapia na Barbearia Marques" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 class="gallery-title">Barboterapia</h3>
+          <p class="gallery-desc">Cuidado clássico com toalha quente, navalha e hidratação.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-cta">
+      <a href="https://www.instagram.com/br_maarques/" target="_blank" rel="noopener" class="btn btn-ghost reveal-up">
+        Ver mais no Instagram ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ BOOKING ═══════════════════ -->
+  <section class="booking" id="booking">
+    <div class="booking-bg-accent"></div>
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-info">
+          <div class="section-tag reveal-up">— Agendamento Online</div>
+          <h2 class="section-title reveal-up" data-delay="0.1">
+            Reserve seu<br /><em>horário</em>
+          </h2>
+          <p class="booking-text reveal-up" data-delay="0.2">
+            Agende de forma rápida e prática diretamente pelo nosso WhatsApp. Escolha o serviço, o profissional e sua unidade de preferência.
+          </p>
+          <div class="booking-hours reveal-up" data-delay="0.3">
+            <div class="hours-row">
+              <span>Terça a Sexta</span>
+              <span>10h — 20h</span>
+            </div>
+            <div class="hours-row">
+              <span>Sábado e Domingo</span>
+              <span>10h — 20h</span>
+            </div>
+            <div class="hours-row hours-closed">
+              <span>Segunda-feira</span>
+              <span>Fechado</span>
+            </div>
+          </div>
+          <div class="booking-locations">
+            <div class="booking-location reveal-up" data-delay="0.4" style="margin-bottom: 1.5rem;">
+              <div class="location-icon">📍</div>
+              <div>
+                <strong>Unidade Vila Ema</strong><br />
+                Av. Vila Ema, 3416 - Vila Ema
+              </div>
+            </div>
+            <div class="booking-location reveal-up" data-delay="0.45">
+              <div class="location-icon">📍</div>
+              <div>
+                <strong>Unidade Sapopemba</strong><br />
+                Av. Sapopemba, 3795 - Cidade Continental
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="booking-form-col reveal-right">
+          <div class="booking-card">
+            <div class="booking-card-header">
+              <h3>Agendar Agora</h3>
+              <p>Escolha sua unidade e horário pelo WhatsApp</p>
+            </div>
+            <div class="booking-embed">
+              <div class="booking-placeholder">
+                <div class="bp-icon">💬</div>
+                <h4>Agendamento Descomplicado</h4>
+                <p>Clique no botão abaixo para conversar com a nossa equipe no WhatsApp e agendar seu horário.</p>
+                <a href="https://wa.me/5511994090757?text=Olá! Gostaria de agendar um horário na Barbearia Marques." target="_blank" rel="noopener" class="btn btn-primary">
+                  Agendar via WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-tag reveal-up">— Avaliações</div>
+      <h2 class="section-title reveal-up" data-delay="0.1">O que dizem <em>sobre nós</em></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal-up" data-delay="0.1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Melhor barbearia de São Paulo, sem dúvida. O ambiente é incrível e o corte ficou perfeito. Voltarei sempre!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <strong>Marcos R.</strong>
+              <span>Cliente desde 2021</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" data-delay="0.2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Atendimento exclusivo, profissionais incríveis e resultado impecável. A Barbearia Marques é referência em qualidade."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">FS</div>
+            <div>
+              <strong>Felipe S.</strong>
+              <span>Cliente desde 2022</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" data-delay="0.3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"O degradê ficou impecável. Nunca tinha saído tão satisfeito de uma barbearia. Ambiente único e profissionais excepcionais."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LC</div>
+            <div>
+              <strong>Lucas C.</strong>
+              <span>Cliente desde 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-tag reveal-up">— Contato</div>
+          <h2 class="section-title reveal-up" data-delay="0.1">Fale <em>conosco</em></h2>
+          <p class="contact-text reveal-up" data-delay="0.2">
+            Tem alguma dúvida ou quer agendar um horário? Entre em contato via WhatsApp ou Instagram, ou nos visite em uma de nossas unidades.
+          </p>
+          <div class="contact-links reveal-up" data-delay="0.3" style="margin-bottom: 2rem;">
+            <a href="https://www.instagram.com/br_maarques/" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">◎</span>
+              <span>@br_maarques</span>
+            </a>
+            <a href="https://wa.me/5511994090757" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">◎</span>
+              <span>WhatsApp: (11) 99409-0757</span>
+            </a>
+          </div>
+          <div class="contact-units reveal-up" data-delay="0.4" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 0.1em; color: var(--copper); margin-bottom: 1rem; text-transform: uppercase;">Nossas Unidades</h4>
+            <div style="margin-bottom: 1.25rem;">
+              <strong style="color: var(--white);">Unidade Vila Ema</strong><br>
+              <span style="font-size: 0.9rem; color: var(--cream-muted);">Av. Vila Ema, 3416 - Vila Ema, São Paulo - SP</span><br>
+              <a href="https://share.google/zsM5Aew6hs2AQUSxc" target="_blank" rel="noopener" style="color: var(--copper); font-size: 0.85rem; text-decoration: underline;">Ver no Google Maps ↗</a>
+            </div>
+            <div>
+              <strong style="color: var(--white);">Unidade Sapopemba</strong><br>
+              <span style="font-size: 0.9rem; color: var(--cream-muted);">Av. Sapopemba, 3795 - Cidade Continental, São Paulo - SP</span><br>
+              <a href="https://share.google/TMfrrXOBZJEci0BPk" target="_blank" rel="noopener" style="color: var(--copper); font-size: 0.85rem; text-decoration: underline;">Ver no Google Maps ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-col reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">WhatsApp (opcional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="(11) 9 9999-9999" />
+            </div>
+            <div class="form-group">
+              <label for="service">Serviço de interesse</label>
+              <select id="service" name="service">
+                <option value="">Selecione um serviço</option>
+                <option>Corte Clássico</option>
+                <option>Degradê Premium</option>
+                <option>Barba Completa</option>
+                <option>Combo Completo</option>
+                <option>Pigmentação</option>
+                <option>Relaxamento</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="img/logo.jpg" alt="Barbearia Marques Logo" class="footer-logo-img" />
+            <div class="footer-logo-text">
+              <span>Barbearia</span>
+              <span>Marques</span>
+            </div>
+          </div>
+          <p>Precisão. Estilo. Identidade.<br />Av. Vila Ema, 3416 · Av. Sapopemba, 3795<br />São Paulo, SP.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#booking">Agendar</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Horários</h4>
+          <ul>
+            <li>Terça — Domingo</li>
+            <li>10h às 20h</li>
+            <li class="footer-closed">Segunda: Fechado</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Social</h4>
+          <a href="https://www.instagram.com/br_maarques/" target="_blank" rel="noopener" class="social-btn">Instagram ↗</a>
+          <a href="https://wa.me/5511994090757" target="_blank" rel="noopener" class="social-btn">WhatsApp ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Barbearia Marques. Todos os direitos reservados.</p>
+        <a href="#hero" class="back-top" id="backTop">↑ Topo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
