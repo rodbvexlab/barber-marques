@@ -365,6 +365,43 @@ if (aboutBgImg && aboutSection) {
 }
 
 /* ────────────────────────────────────────
+   15b. ABOUT IMAGE SCROLL REVEAL (SMOOTH SCROLL HERO EFFECT)
+   ──────────────────────────────────────── */
+const premiumFrame = document.querySelector('.premium-frame');
+const frameImg = document.querySelector('.frame-img');
+
+if (premiumFrame && frameImg) {
+  // Set initial clip-path and scale
+  frameImg.style.clipPath = 'polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%)';
+  frameImg.style.transform = 'scale(1.5)';
+
+  window.addEventListener('scroll', () => {
+    const rect = premiumFrame.getBoundingClientRect();
+    const viewHeight = window.innerHeight;
+    
+    if (rect.top < viewHeight && rect.bottom > 0) {
+      // 0 when the top of premiumFrame enters the bottom of viewport
+      // 1 when the top of premiumFrame reaches 15% of viewport height from the top
+      const start = viewHeight;
+      const end = viewHeight * 0.15;
+      
+      let progress = (start - rect.top) / (start - end);
+      progress = Math.max(0, Math.min(1, progress));
+      
+      // Interpolate clip-path values (from 25% centered box to 0% full box)
+      const clipStart = 25 - (25 * progress);
+      const clipEnd = 75 + (25 * progress);
+      
+      frameImg.style.clipPath = `polygon(${clipStart}% ${clipStart}%, ${clipEnd}% ${clipStart}%, ${clipEnd}% ${clipEnd}%, ${clipStart}% ${clipEnd}%)`;
+      
+      // Interpolate scale from 1.5 down to 1.0
+      const scale = 1.5 - (0.5 * progress);
+      frameImg.style.transform = `scale(${scale})`;
+    }
+  }, { passive: true });
+}
+
+/* ────────────────────────────────────────
    16. CARDS MOUSE GLOW SPOTLIGHT
    ──────────────────────────────────────── */
 if (window.matchMedia('(pointer: fine)').matches) {
