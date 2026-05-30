@@ -231,7 +231,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* ────────────────────────────────────────
    10. GALLERY — lightbox (simple)
    ──────────────────────────────────────── */
-const galleryItems = document.querySelectorAll('.gallery-item img');
+const galleryItems = document.querySelectorAll('.gallery-item img, .frame-zoom-container img');
 
 galleryItems.forEach((img) => {
   img.style.cursor = 'zoom-in';
